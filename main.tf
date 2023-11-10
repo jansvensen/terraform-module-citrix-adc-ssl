@@ -127,6 +127,8 @@ resource "citrixadc_sslprofile" "ssl_prof_fe_1213" {
   tls11        = "DISABLED"
   tls12        = "ENABLED"
   tls13        = "ENABLED"
+  hsts         = "ENABLED"
+  maxage       = "31536000"
 
   cipherbindings {
     ciphername     = "ssl_cg_${var.adc-base.environmentname}_fe_TLS1213"
@@ -160,6 +162,8 @@ resource "citrixadc_sslprofile" "ssl_prof_fe_1213_SNI" {
   tls12        = "ENABLED"
   tls13        = "ENABLED"
   snienable    = "ENABLED" 
+  hsts         = "ENABLED"
+  maxage       = "31536000"
 
   cipherbindings {
     ciphername     = "ssl_cg_${var.adc-base.environmentname}_fe_TLS1213"
@@ -192,6 +196,8 @@ resource "citrixadc_sslprofile" "ssl_prof_fe_13" {
   tls11        = "DISABLED"
   tls12        = "DISABLED"
   tls13        = "ENABLED"
+  hsts         = "ENABLED"
+  maxage       = "31536000"
 
   cipherbindings {
     ciphername     = "ssl_cg_${var.adc-base.environmentname}_fe_TLS13"
@@ -225,6 +231,8 @@ resource "citrixadc_sslprofile" "ssl_prof_fe_13_SNI" {
   tls12        = "DISABLED"
   tls13        = "ENABLED"
   snienable    = "ENABLED" 
+  hsts         = "ENABLED"
+  maxage       = "31536000"
 
   cipherbindings {
     ciphername     = "ssl_cg_${var.adc-base.environmentname}_fe_TLS13"
